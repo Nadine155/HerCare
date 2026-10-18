@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #684fa7;
+  --theme-primary-container: #8a6fd4;
+  --theme-primary-fixed: #ede4ff;
+  --theme-on-primary-fixed: #23005c;
+  --theme-on-primary-container: #ffffff;
+
+  --theme-secondary: #6c5696;
+  --theme-secondary-container: #d5c2fe;
+  --theme-secondary-fixed: #efe5ff;
+  --theme-on-secondary-fixed: #230c4a;
+  --theme-on-secondary-container: #ffffff;
+
+  --theme-bg: #f8f4fe;
+  --theme-surface: #f8f4fe;
+  --theme-surface-container-low: #f2ecfc;
+  --theme-surface-container: #e9e0f8;
+  --theme-surface-container-high: #ded3f2;
+  --theme-surface-container-lowest: #ffffff;
+  --theme-light-card: #f6f0ff;
+  --theme-accent: #684fa7;
+}
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --color-background: var(--theme-bg, #f8f4fe);
+  --color-surface: var(--theme-surface, #f8f4fe);
+  --color-surface-dim: #ddd9d6;
+  --color-surface-bright: var(--theme-surface, #f8f4fe);
+  --color-surface-container-lowest: var(--theme-surface-container-lowest, #ffffff);
+  --color-surface-container-low: var(--theme-surface-container-low, #f2ecfc);
+  --color-surface-container: var(--theme-surface-container, #e9e0f8);
+  --color-surface-container-high: var(--theme-surface-container-high, #ded3f2);
+  --color-surface-container-highest: #ded3f2;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #494551;
+  --color-inverse-surface: #31302e;
+  --color-inverse-on-surface: #f4f0ec;
+  --color-outline: #7a7582;
+  --color-outline-variant: var(--theme-outline-variant, #cbc4d2);
+
+  --color-primary: var(--theme-primary, #684fa7);
+  --color-primary-container: var(--theme-primary-container, #8a6fd4);
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: var(--theme-on-primary-container, #ffffff);
+  --color-primary-fixed: var(--theme-primary-fixed, #ede4ff);
+  --color-primary-fixed-dim: var(--theme-primary-fixed, #ede4ff);
+  --color-on-primary-fixed: var(--theme-on-primary-fixed, #23005c);
+  --color-on-primary-fixed-variant: var(--theme-on-primary-fixed, #23005c);
+
+  --color-secondary: var(--theme-secondary, #6c5696);
+  --color-secondary-container: var(--theme-secondary-container, #d5c2fe);
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: var(--theme-on-secondary-container, #ffffff);
+  --color-secondary-fixed: var(--theme-secondary-fixed, #efe5ff);
+  --color-secondary-fixed-dim: var(--theme-secondary-fixed, #efe5ff);
+  --color-on-secondary-fixed: var(--theme-on-secondary-fixed, #230c4a);
+  --color-on-secondary-fixed-variant: var(--theme-on-secondary-fixed, #230c4a);
+
+  --color-tertiary: var(--theme-secondary, #6c5696);
+  --color-tertiary-container: var(--theme-secondary-container, #d5c2fe);
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: var(--theme-on-secondary-fixed, #230c4a);
+  --color-tertiary-fixed: var(--theme-secondary-fixed, #efe5ff);
+  --color-tertiary-fixed-dim: var(--theme-secondary-fixed, #efe5ff);
+  --color-on-tertiary-fixed: var(--theme-on-secondary-fixed, #230c4a);
+  --color-on-tertiary-fixed-variant: var(--theme-on-secondary-fixed, #230c4a);
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-bg, #fdf9f5);
+    color: #1c1c19;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 12px);
+  }
+  
+  .px-margin {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Material Symbols Outlined font styling helper */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* Hide scrollbar for clean carousel feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
